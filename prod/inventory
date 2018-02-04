@@ -1,6 +1,6 @@
 [all:vars]
-username=ine
-password=ine
+username=lab
+password=lab
 
 [all]
 172.16.1.201
