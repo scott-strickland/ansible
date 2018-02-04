@@ -1,0 +1,57 @@
+service timestamps debug local datetime msec
+service timestamps log local datetime msec
+service tcp-keepalives-in
+service tcp-keepalives-out
+service password-encryption
+service sequence-numbers
+no service pad
+!
+hostname {{ item.value.hostname }}
+!
+!
+no aaa new-model
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+archive
+ log config
+  logging enable
+  hidekeys
+username {{ item.value.username }} privilege 15 secret {{ item.value.password}}
+enable secret {{ item.value.secret }}
+!
+redundancy
+!
+!
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+ipv6 ioam timestamp
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ login local
+ exec-timeout 120 0
+line aux 0
+line vty 0 4
+ privilege level 15
+ login local
+ transport input ssh
+ exec-timeout 30 0
