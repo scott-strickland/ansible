@@ -1,6 +1,6 @@
 ---
 - name: Get Device Facts
-  hosts: "ios"
+  hosts: "ios-routers"
   gather_facts: false
   connection: local
 
