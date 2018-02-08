@@ -45,7 +45,7 @@
                     }
                 ], 
                 "lineprotocol": "up ", 
-                "macaddress": "fa16.3e26.f872", 
+                "macaddress": "fa16.3e83.2ec1", 
                 "mediatype": "RJ45", 
                 "mtu": 1500, 
                 "operstatus": "up", 
@@ -57,7 +57,7 @@
                 "duplex": "Auto", 
                 "ipv4": [], 
                 "lineprotocol": "down ", 
-                "macaddress": "fa16.3e5b.a79b", 
+                "macaddress": "fa16.3eba.07cd", 
                 "mediatype": "RJ45", 
                 "mtu": 1500, 
                 "operstatus": "administratively down", 
@@ -81,7 +81,7 @@
                 "type": null
             }
         }, 
-        "ansible_net_memfree_mb": 256884, 
+        "ansible_net_memfree_mb": 256872, 
         "ansible_net_memtotal_mb": 323473, 
         "ansible_net_model": "IOSv", 
         "ansible_net_neighbors": {
@@ -92,7 +92,7 @@
                 }
             ]
         }, 
-        "ansible_net_serialnum": "9L44CJNE950CDSYPWUQIX", 
+        "ansible_net_serialnum": "9H47OZKVYU2X240EBD5ME", 
         "ansible_net_version": "15.6(3)M2"
     }, 
     "changed": false, 

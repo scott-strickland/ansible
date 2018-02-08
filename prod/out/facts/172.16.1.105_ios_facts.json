@@ -45,7 +45,7 @@
                     }
                 ], 
                 "lineprotocol": "up ", 
-                "macaddress": "fa16.3e28.3902", 
+                "macaddress": "fa16.3e01.35ad", 
                 "mediatype": "RJ45", 
                 "mtu": 1500, 
                 "operstatus": "up", 
@@ -69,7 +69,7 @@
                 "type": null
             }
         }, 
-        "ansible_net_memfree_mb": 265319, 
+        "ansible_net_memfree_mb": 265307, 
         "ansible_net_memtotal_mb": 335761, 
         "ansible_net_model": "IOSv", 
         "ansible_net_neighbors": {
@@ -80,7 +80,7 @@
                 }
             ]
         }, 
-        "ansible_net_serialnum": "94W8VCKB0W06HSF1OVX9Y", 
+        "ansible_net_serialnum": "9GRD068TMPL1N7X5YQOYY", 
         "ansible_net_version": "15.6(3)M2"
     }, 
     "changed": false, 
