@@ -1,0 +1,11 @@
+---
+- name: Backup Configuration
+  hosts: "ios-routers"
+  gather_facts: false
+  connection: local
+
+  tasks:
+  - name: Get Config
+    ios_config:
+      backup: True
+      provider: "{{ cli }}" 

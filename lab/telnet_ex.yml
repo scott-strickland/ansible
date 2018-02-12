@@ -1,0 +1,12 @@
+---
+- name: Telnet Example
+  hosts: "ios-routers"
+  gather_facts: false
+  connection: local
+
+  tasks:
+  - name: Use Telnet
+    telnet:
+      command:
+        - hostname R1
+

@@ -1,0 +1,27 @@
+---
+- name: Get Device Facts
+  hosts: "nxos"
+  gather_facts: false
+  connection: local
+
+  vars:
+    cli:
+      username: "{{ username }}"
+      password: "{{ password }}"
+
+  tasks:
+    - name: Gather facts
+      nxos_facts:
+        gather_subset:
+          - "!config"
+        provider: "{{ cli }}"
+      register: output
+
+    - copy: 
+        content: "{{ output | to_nice_json }}"
+        dest: "out/facts/{{inventory_hostname}}_nxos_facts.json"
+
+    - name: Get config
+      nxos_config:
+        backup: True
+        provider: "{{ cli }}"

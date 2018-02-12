@@ -1,0 +1,9 @@
+[all]
+10.1.99.1
+10.1.0.10
+
+[branch-routers]
+10.1.99.1
+
+[branch-switches]
+10.1.0.10

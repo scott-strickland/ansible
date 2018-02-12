@@ -1,0 +1,15 @@
+---
+ios_routers: {
+  "R1":
+    {"hostname": "R1",
+     "username": "{{ username }}",
+     "password": "{{ password }}",
+     "secret": "{{ secret }}",
+   },
+  "R2":
+    {"hostname": "R2",
+     "username": "{{ username }}",
+     "password": "{{ password }}",
+     "secret": "{{ secret }}",
+   },     
+}

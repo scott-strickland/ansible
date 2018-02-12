@@ -1,0 +1,10 @@
+---
+- name: Ansible Group and Host Variables
+  hosts: localhost
+
+  tasks:
+    - name: create router configuration files
+      template:
+        src=./ios_routers.j2
+        dest=out/configs/./{{ item.key }}.conf
+      with_dict: "{{ ios_routers }}"
