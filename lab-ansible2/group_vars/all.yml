@@ -1,0 +1,8 @@
+---
+username: lab
+password: lab
+
+cli:
+  host: "{{ ansible_host }}"
+  username: "{{ username }}"
+  password: "{{ password }}"

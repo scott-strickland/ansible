@@ -1,0 +1,27 @@
+---
+- name: Get Device Facts
+  hosts: "ios-routers"
+  gather_facts: false
+  connection: local
+
+  vars:
+    cli:
+      username: "{{ username }}"
+      password: "{{ password }}"
+
+  tasks:
+    - name: Gather facts
+      ios_facts:
+        gather_subset:
+          - "!config"
+        provider: "{{ cli }}"
+      register: output
+
+    - copy: 
+        content: "{{ output | to_nice_json }}"
+        dest: "out/facts/{{inventory_hostname}}_ios_facts.json"
+
+    - name: Get config
+      ios_config:
+        backup: True
+        provider: "{{ cli }}"
